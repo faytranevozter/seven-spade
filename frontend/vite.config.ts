@@ -14,7 +14,10 @@ export default defineConfig({
     proxy: {
       '/api': 'http://localhost:5050',
       '/ws': { target: 'ws://localhost:5050', ws: true },
-      '/auth': 'http://localhost:5050',
+      '/auth/google': 'http://localhost:5050',
+      '/auth/github': 'http://localhost:5050',
+      '/auth/telegram': 'http://localhost:5050',
+      '/auth/me': 'http://localhost:5050',
     },
   },
 })
