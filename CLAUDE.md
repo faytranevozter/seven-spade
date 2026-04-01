@@ -19,7 +19,8 @@ Project-specific instructions for Claude when working on this codebase.
 
 - Go binary: `/usr/local/go/bin/go` — run `export PATH=$PATH:/usr/local/go/bin` if `go` is not found.
 - Node.js via nvm: `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh"` before using `npm`/`npx`.
-- Backend needs `backend/.env` — copy from `backend/.env.example`.
+- **Local dev**: backend reads `backend/.env` — copy from `backend/.env.example`.
+- **Docker Compose**: uses root `.env` — copy from `.env.example`.
 - For local dev, start Postgres + Redis: `docker compose up -d postgres redis`.
 
 ## Architecture Rules

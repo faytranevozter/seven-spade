@@ -52,7 +52,8 @@ seven-spade/
 │   │   └── types/             # TypeScript type definitions
 │   ├── Dockerfile
 │   └── nginx.conf
-└── docker-compose.yml         # Full-stack orchestration
+├── docker-compose.yml         # Full-stack orchestration
+└── .env.example               # Environment variable template for Docker Compose
 ```
 
 ## Prerequisites
@@ -105,15 +106,19 @@ Visit **http://localhost:5173** in your browser.
 ## Running with Docker Compose (Production)
 
 ```bash
-# Create backend .env
-cp backend/.env.example backend/.env
-# Edit backend/.env with your secrets
+# Create root .env from the template
+cp .env.example .env
+# Edit .env — set JWT_MEMBER_SECRET_KEY and any OAuth credentials
 
 # Build and start everything
 docker compose up --build -d
 
 # App is available at http://localhost (port 80)
 ```
+
+> **Note:** The root `.env` is used by Docker Compose for all services. For local
+> development (running the backend directly), use `backend/.env` instead
+> (copy from `backend/.env.example`).
 
 ## API Endpoints
 

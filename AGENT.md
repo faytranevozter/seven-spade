@@ -54,7 +54,8 @@ docker compose up -d postgres redis # DB only (for local dev)
 
 - Go is at `/usr/local/go/bin` — you may need: `export PATH=$PATH:/usr/local/go/bin`
 - Node.js is via nvm: `export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh"`
-- Backend config: `backend/.env` (copy from `backend/.env.example`)
+- **Local dev** backend config: `backend/.env` (copy from `backend/.env.example`)
+- **Docker Compose** config: root `.env` (copy from `.env.example`)
 
 ## Coding Conventions
 

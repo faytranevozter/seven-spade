@@ -1,0 +1,38 @@
+# Root .gitignore for Seven Spade
+
+# Ignore environment files
+.env
+.env.*
+!.env.example
+
+# Node modules and build outputs
+frontend/node_modules/
+frontend/dist/
+
+# Dependency locks (optional, keep if you want reproducible builds)
+frontend/package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+
+# Docker
+**/.dockerignore
+**/Dockerfile
+
+# Go build outputs
+backend/bin/
+backend/coverage.out
+backend/*.test
+
+# Misc
+*.bak
+*.tmp
