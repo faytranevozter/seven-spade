@@ -14,8 +14,8 @@ type User struct {
 	Email         string         `json:"email"          gorm:"uniqueIndex"`
 	Password      string         `json:"-"`
 	AvatarURL     string         `json:"avatar_url"`
-	OAuthProvider string         `json:"oauth_provider"` // google, github, telegram
-	OAuthID       string         `json:"-"              gorm:"index"`
+	OAuthProvider string         `json:"oauth_provider" gorm:"column:oauth_provider"` // google, github, telegram
+	OAuthID       string         `json:"-"              gorm:"index;column:oauth_id"`
 	EloRating     int            `json:"elo_rating"     gorm:"default:1000"`
 	CreatedAt     time.Time      `json:"created_at"`
 	UpdatedAt     time.Time      `json:"updated_at"`
