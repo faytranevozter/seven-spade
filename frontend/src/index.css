@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #1a5c2e;
+  --color-primary-light: #2d8a47;
+  --color-surface: #0d1b0f;
+  --color-surface-light: #1a2e1d;
+  --color-gold: #d4a843;
+  --color-card-red: #dc2626;
+  --color-card-black: #1f2937;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--color-surface) 0%, #0a1a0c 100%);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.suit-hearts, .suit-diamonds { color: var(--color-card-red); }
+.suit-clubs, .suit-spades { color: var(--color-card-black); }
